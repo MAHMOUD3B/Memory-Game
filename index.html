@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Game</title>
+    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="./all.min.css">
+  </head>
+
+  <body>
+    <div class="overlay">
+      <span>Start Game</span>
+    </div>
+    <div class="game-info">
+      <div class="name">
+        Hello: <span></span>
+      </div>
+      <div class="tries">
+        Wrong Tries: <span>0</span>
+      </div>
+    </div>
+    <div class="blocks-container">
+      <div class="game-block" data-object="laptop">
+        <div class="face front"></div>
+        <div class="face back">
+          <i class="fa fa-laptop"></i>
+        </div>
+      </div>
+      <div class="game-block" data-object="laptop">
+        <div class="face front"></div>
+        <div class="face back">
+          <i class="fa fa-laptop"></i>
+        </div>
+      </div>
+      <div class="game-block" data-object="mobile">
+        <div class="face front"></div>
+        <div class="face back">
+          <i class="fa fa-mobile"></i>
+        </div>
+      </div>
+      <div class="game-block" data-object="mobile">
+        <div class="face front"></div>
+        <div class="face back">
+          <i class="fa fa-mobile"></i>
+        </div>
+      </div>
+      <div class="game-block" data-object="headphone">
+        <div class="face front"></div>
+        <div class="face back">
+          <i class="fa fa-headphones"></i>
+        </div>
+      </div>
+      <div class="game-block" data-object="headphone">
+        <div class="face front"></div>
+        <div class="face back">
+          <i class="fa fa-headphones"></i>
+        </div>
+      </div>
+      <div class="game-block" data-object="gamepad">
+        <div class="face front"></div>
+        <div class="face back">
+          <i class="fa fa-gamepad"></i>
+        </div>
+      </div>
+      <div class="game-block" data-object="gamepad">
+        <div class="face front"></div>
+        <div class="face back">
+          <i class="fa fa-gamepad"></i>
+        </div>
+      </div>
+      <div class="game-block" data-object="car">
+        <div class="face front"></div>
+        <div class="face back">
+          <i class="fa fa-car"></i>
+        </div>
+      </div>
+      <div class="game-block" data-object="car">
+        <div class="face front"></div>
+        <div class="face back">
+          <i class="fa fa-car"></i>
+        </div>
+      </div>
+      <div class="game-block" data-object="pen">
+        <div class="face front"></div>
+        <div class="face back">
+          <i class="fa fa-pen"></i>
+        </div>
+      </div>
+      <div class="game-block" data-object="pen">
+        <div class="face front"></div>
+        <div class="face back">
+          <i class="fa fa-pen"></i>
+        </div>
+      </div>
+      <div class="game-block" data-object="gem">
+        <div class="face front"></div>
+        <div class="face back">
+          <i class="fa fa-gem"></i>
+        </div>
+      </div>
+      <div class="game-block" data-object="gem">
+        <div class="face front"></div>
+        <div class="face back">
+          <i class="fa fa-gem"></i>
+        </div>
+      </div>
+    </div>
+    <audio id="success" src="./audio/tada.wav" preload="auto"></audio>
+    <audio id="fail" src="./audio/Windows Hardware Fail.wav" preload="auto"></audio>
+    <audio id="start" src="./audio/Windows Logon.wav" preload="auto"></audio>
+
+    <!-- JS files -->
+    <script src="./main.js"></script>
+    <script src="./all.min.js"></script>
+  </body>
+
+</html>

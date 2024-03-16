@@ -1,0 +1,123 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #444;
+}
+
+.overlay {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 157, 255, 0.8);
+    z-index: 2;
+}
+
+.overlay span {
+    color: white;
+    background-color: black;
+    padding: 10px 20px;
+    font-size: 30px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    border-radius: 10px;
+}
+@media (max-width: 767px) {
+    .overlay span {
+        font-size: 20px;
+    }
+}
+
+.game-info {
+    width: 90%;
+    margin: 20px auto;
+    background-color: #ccc;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    border: 2px solid rgb(0, 217, 255);
+    border-radius: 10px;
+}
+
+.blocks-container {
+    width: 90%;
+    margin: 20px auto;
+    background-color: #eee;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.blocks-container.click-disabled {
+    pointer-events: none;
+}
+
+.game-block {
+    width: 200px;
+    height: 200px;
+    font-size: 60px;
+    flex-grow: 1;
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    position: relative;
+}
+@media (max-width: 767px) {
+    .game-block {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+.face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backface-visibility: hidden;
+    border: 5px solid rgb(0, 217, 255);
+}
+
+.game-block .front {
+    background-color: #222;
+    line-height: 200px;
+}
+
+.front::before {
+    content: "!";
+    font-size: 140px;
+    font-weight: bold;
+    color: white;
+}
+@media (max-width: 767px) {
+    .front::before {
+        font-size: 90px;
+    }
+}
+
+.game-block .back {
+    transform: rotateY(180deg);
+    background-color: rgb(196, 235, 151);
+    color: rgb(0, 128, 255);
+}
+
+.game-block.clicked,
+.game-block.matched {
+    transform: rotateY(180deg);
+    pointer-events: none;
+}
